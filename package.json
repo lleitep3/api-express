@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "dev": "./node_modules/nodemon/bin/nodemon.js ./src/app.js"
+    "dev": "./node_modules/nodemon/bin/nodemon.js ./server.js"
   },
   "repository": {
     "type": "git",
