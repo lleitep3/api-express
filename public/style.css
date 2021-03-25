@@ -68,10 +68,13 @@ body > header {
   font-size: .8rem;
 }
 
+.login-box .form-item select,
 .login-box .form-item input {
   width: 100%;
   border-radius: 5px;
   border: 1px solid #999;
+  background: white;
+  height: 25px;
 }
 
 .login-box .form-item .radio-item {
@@ -85,10 +88,9 @@ body > header {
   flex-grow: 1;
 }
 
-.login-box .form-item input {
+.login-box .form-item .radio-item input {
   width: initial;
   margin: 0 5px 0 0;
-  height: 25px;
 }
 
 .login-box .form-item .submit {
