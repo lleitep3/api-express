@@ -1,23 +1,19 @@
 {
-  "name": "api",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "name": "app-todo",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "dev": "./node_modules/nodemon/bin/nodemon.js ./server.js"
+    "start": "node ./bin/www",
+    "dev": "npx nodemon ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lleitep3/api-express.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/lleitep3/api-express/issues"
-  },
-  "homepage": "https://github.com/lleitep3/api-express#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "express-session": "^1.17.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"

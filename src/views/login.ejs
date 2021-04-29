@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Site</title>
+    <link rel='stylesheet' href='/stylesheets/login.css' />
+  </head>
+  <body>
+      <section class="container centered-wrapper">
+      <div class="login-box">
+
+        <% if (locals.errorMessage) { %>
+          <div class="error-message">
+            <span><%= locals.errorMessage %></span>
+          </div>
+        <% } %>
+
+        <form action="/login" method="POST">
+
+          <fieldset>
+            <label for="email">E-mail</label>
+            <input name="email" id="email"/>
+          </fieldset>
+
+          <fieldset>
+            <label for="password">Senha</label>
+            <input name="password" id="password"/>
+          </fieldset>
+
+          <button>Entrar</button>
+        </form>
+
+      </div>
+      </section>
+
+
+    <script>
+      console.log('APARECEEEEEUUU!!!')
+    </script>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+@import url('/stylesheets/style.css');
+
+.login-box {
+  padding: 25px;
+  background-color: aquamarine;
+  box-shadow: 3px ​3px 9px 2px #ddd;
+}
