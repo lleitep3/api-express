@@ -1,5 +1,11 @@
 
-const TODO_LIST = [{ id: 123, text: 'primeira tarefa'}]
+const TODO_LIST = [
+  { id: 123, text: 'primeira tarefa'},
+  { id: 124, text: 'segunda tarefa'},
+  { id: 125, text: 'terceira tarefa'},
+  { id: 126, text: 'quarta tarefa'},
+  { id: 127, text: 'quinta tarefa'}
+]
 
 class Service {
 

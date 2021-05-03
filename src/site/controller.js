@@ -1,30 +1,27 @@
 const AuthService = require("../auth/service");
 const UserService = require("../users/service");
+const TodoService = require("../todo/service");
 
 class Controller {
 
   home(req, res) {
 
-    console.log('--------------------')
-    console.log('--------------------')
     if (req.session.isLogged) {
-      console.log('--------------------')
-      console.log('--------------------')
-      console.log('--------------------')
-      console.log('--------------------')
       res.render("index", {
         user: req.session.user
       });
     } else {
-      console.log('+++++++++++++++++++')
-      console.log('+++++++++++++++++++')
       res.redirect("login");
     }
   }
 
+  todoList(req, res) {
+    res.render("todo-list", {
+      todoList: TodoService.findAll()
+    });
+  }
+
   login(req, res) {
-    console.log('==================')
-    console.log('==================')
     if (req.session.isLogged) {
       res.redirect("index");
     } else {

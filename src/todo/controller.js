@@ -3,18 +3,18 @@ const service = require('./service')
 class Controller {
 
   controller(service) {
-    this.service = service
+    service = service
   }
 
   list (req, res) {
-    const todoList = this.service.findAll()
+    const todoList = service.findAll()
     res.json(todoList)
   }
 
   create (req, res) {
     const { text } = req.body
 
-    this.service.save({ text })
+    service.save({ text })
 
     res.status(201)
     res.json({ success: true })
@@ -24,7 +24,7 @@ class Controller {
     const { todoId } = req.params
     const { text } = req.body
 
-    this.service.save({ id: todoId, text })
+    service.save({ id: todoId, text })
 
     req.json({ success: true })
   }
@@ -32,7 +32,7 @@ class Controller {
   remove (req, res) {
     const { todoId } = req.params
 
-    this.service.remove(todoId)
+    service.remove(todoId)
 
     req.json({ success: true })
   }
