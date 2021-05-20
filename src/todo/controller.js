@@ -1,13 +1,8 @@
 const service = require('./service')
 
 class Controller {
-
-  controller(service) {
-    service = service
-  }
-
-  list (req, res) {
-    const todoList = service.findAll()
+  async list (req, res) {
+    const todoList = await service.findAll()
     res.json(todoList)
   }
 
@@ -26,7 +21,7 @@ class Controller {
 
     service.save({ id: todoId, text })
 
-    req.json({ success: true })
+    res.json({ success: true })
   }
 
   remove (req, res) {
@@ -34,9 +29,8 @@ class Controller {
 
     service.remove(todoId)
 
-    req.json({ success: true })
+    res.json({ success: true })
   }
-
 }
 
 const TodoController = new Controller(service)
