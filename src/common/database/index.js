@@ -1,11 +1,11 @@
 const { Sequelize } = require('sequelize')
 const config = require('../../../settings/index')
 
-const { drive, host, database, user, password } = config.database
+const { drive, host, port, database, user, password } = config.database
 
 const sequelize = new Sequelize(database, user, password, {
-  host: host,
-  port: 3307,
+  host,
+  port,
   dialect: drive
 })
 

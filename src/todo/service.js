@@ -1,4 +1,4 @@
-const { findAll } = require('./database')
+const { findAll, create } = require('./database')
 const TodoModel = require('./model')
 
 let TODO_LIST = [
@@ -26,7 +26,7 @@ class Service {
       const index = TODO_LIST.findIndex(todo => Number(todo.id) === Number(id))
       TODO_LIST[index] = todoToSave
     } else {
-      TODO_LIST.push({ id: Math.random(), text })
+      create(text)
     }
 
     return todoToSave

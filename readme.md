@@ -23,9 +23,16 @@ Com o ambiente está rodando, basta acessar [http://localhost:3000](http://local
 
 ### TODO
 
-- [ ] Subir a aplicação na sua máquina.
-- [ ] [BUG] - Quando estou logado e acesso a página de login, a aplicação está quebrando.
-- [ ] [FEATURE] - Criar o cadastro de usuário.
-- [ ] [FEATURE] - Criar a página de **TODO LIST** do usuário.
-- [ ] [FEATURE] - Cadastrar um item na lista.
-- [ ] [FEATURE] - Remover um item da lista.
+- [ ] [FEATURE] - Baixar o projeto
+- [ ] [FEATURE] - Instalar o projeto
+- [ ] [FEATURE] - Criar a tabela no banco de dados mysql
+- [ ] [FEATURE] - Configurar dados de acesso
+- [ ] [FEATURE] - Implementar edição de tarefa
+- [ ] [FEATURE] - Implementar deleção de tarefa
+- [ ] [FEATURE] - Implementar endpoint de find by id
+
+
+**OBS: fazer implementação com query e com o TodoModel**
+
+**Bonus:** *Implementar Layout com EJS*
+**Bouns 2:** *Implementar Front-end com `axios`*
