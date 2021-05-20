@@ -1,8 +1,8 @@
 const service = require('./service')
 
 class Controller {
-  list (req, res) {
-    const todoList = service.findAll()
+  async list (req, res) {
+    const todoList = await service.findAll()
     res.json(todoList)
   }
 

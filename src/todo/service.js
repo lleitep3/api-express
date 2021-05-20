@@ -1,3 +1,6 @@
+const { findAll } = require('./database')
+const TodoModel = require('./model')
+
 let TODO_LIST = [
   { id: 123, text: 'primeira tarefa' },
   { id: 124, text: 'segunda tarefa' },
@@ -8,7 +11,8 @@ let TODO_LIST = [
 
 class Service {
   findAll () {
-    return TODO_LIST
+    // return findAll()
+    return TodoModel.findAll()
   }
 
   findOne (id) {

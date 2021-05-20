@@ -1,0 +1,17 @@
+const { QueryTypes } = require('sequelize')
+const { sequelize } = require('../common/database')
+
+const findAll = async () => {
+  const query = 'SELECT * FROM todos'
+
+  const result = await sequelize.query(query, {
+    raw: false,
+    type: QueryTypes.SELECT
+  })
+
+  return result
+}
+
+module.exports = {
+  findAll
+}

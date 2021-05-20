@@ -6,6 +6,7 @@ const todoRouter = require('./todo/routes')
 
 const app = express()
 
+require('./todo/model')
 // view engine setup
 app.use(logger('dev'))
 app.use(express.json())
