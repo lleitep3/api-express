@@ -1,11 +1,18 @@
-Explorando Sessões no express API
+CRUD express API
 ===
 
+### :) ATENÇÃO, FAÇA O FORK DO PROJETO :)
+
 ## Proposta
-Vamos explorar o express e como gerar uma sessão gerenciada por cookies.
+Acabamos de chegar na empresa e nosso primeiro desafio é subir o projeto na nossa máquina, implementar umas features e corrigir uns bugs que possam existir no caminho.
 
 ## Instalando o projeto
 
+
+#### Banco de dados
+Como banco de dados estamos utilizando um `MySQL`, as configurações do banco estão no arquivo `/settings/index.js`.
+
+Utilize as configurações do seu banco local.
 
 #### Instalar as dependencias
 ```javascript
