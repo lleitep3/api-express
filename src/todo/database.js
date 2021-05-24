@@ -23,7 +23,31 @@ const create = async text => {
   return result
 }
 
+const edit = async (id, text) => {
+  const query = `UPDATE todos SET text = "${text}" WHERE id = ${id}`
+
+  const result = await sequelize.query(query, {
+    raw: false,
+    type: QueryTypes.UPDATE
+  })
+
+  return result
+}
+
+const remove = async id => {
+  const query = `DELETE todos WHERE id = ${id}`
+
+  const result = await sequelize.query(query, {
+    raw: false,
+    type: QueryTypes.UPDATE
+  })
+
+  return result
+}
+
 module.exports = {
   findAll,
-  create
+  create,
+  edit,
+  remove
 }
