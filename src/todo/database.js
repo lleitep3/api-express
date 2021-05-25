@@ -12,6 +12,17 @@ const findAll = async () => {
   return result
 }
 
+const findAllByTerm = async term => {
+  const query = 'SELECT * FROM todos'
+
+  const result = await sequelize.query(query, {
+    raw: false,
+    type: QueryTypes.SELECT
+  })
+
+  return result
+}
+
 const create = async text => {
   const query = `INSERT INTO todos (text) VALUES ("${text}")`
 
@@ -47,6 +58,7 @@ const remove = async id => {
 
 module.exports = {
   findAll,
+  findAllByTerm,
   create,
   edit,
   remove

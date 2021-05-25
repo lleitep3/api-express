@@ -1,9 +1,16 @@
-const { findAll, create, edit, remove } = require('./database')
+const { findAll, findAllByTerm, create, edit, remove } = require('./database')
 const TodoModel = require('./model')
 
 class Service {
-  findAll () {
-    return findAll()
+  findAll ({ limit, page, term }) {
+    // if (term) {
+    //   return findAllByTerm(term)
+    // } else {
+    //   return findAll({ limit, page })
+    // }
+
+    return term ? findAllByTerm(term) : findAll({ limit, page })
+
     // return TodoModel.findAll()
   }
 

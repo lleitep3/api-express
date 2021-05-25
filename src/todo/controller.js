@@ -2,7 +2,13 @@ const service = require('./service')
 
 class Controller {
   async list (req, res) {
-    const todoList = await service.findAll()
+    const { limit = 2, page = 1, term = null } = req.query
+
+    const todoList = await service.findAll({
+      limit,
+      page,
+      term
+    })
     res.json(todoList)
   }
 
